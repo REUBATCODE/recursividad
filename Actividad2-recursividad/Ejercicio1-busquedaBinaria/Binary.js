@@ -14,15 +14,15 @@ export function binarySearch(arr, searchValue) {
     const mid = Math.floor((left + right) / 2);
 
     if (arr[mid] === searchValue) {
-      return mid; // Found the search value, return its index
+      return mid; // Encontrar el valor y regresar el index
     } else if (arr[mid] < searchValue) {
-      left = mid + 1; // Search in the right half
+      left = mid + 1; // Buscar mitad derecha
     } else {
-      right = mid - 1; // Search in the left half
+      right = mid - 1; // Buscar mitad izquierda
     }
   }
 
-  return -1; // Search value not found
+  return -1; // Buscar valor no encontrado
 }
 
 // Example usage:

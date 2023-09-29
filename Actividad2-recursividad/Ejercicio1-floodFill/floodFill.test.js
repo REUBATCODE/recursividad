@@ -1,27 +1,23 @@
-import { floodFill } from './floodFill';
-
-beforeAll(() => {
-  console.info('Autor: Hecho por Rubén Vega');
-})
-
-describe('floodFill', () => {
-  it('should fill the area correctly', () => {
-    const grid = [
-      [1, 1, 1, 1, 1],
-      [1, 1, 1, 0, 0],
-      [1, 0, 0, 0, 1],
-      [1, 1, 1, 1, 1]
-    ];
-
-    const expectedGrid = [
-      [2, 2, 2, 2, 2],
-      [2, 2, 2, 0, 0],
-      [2, 0, 0, 0, 1],
-      [2, 2, 2, 2, 2]
-    ];
-
-    floodFill(grid, 1, 2, 1, 2);
-    expect(grid).toEqual(expectedGrid);
-  });
-
-});
+import { floodFill } from "./floodFill"
+describe('Suite de pruebas para la función de FloodFill()',() => {
+    beforeAll(() =>{
+        console.info('Autor: Hecho por Ruben Vega');
+    })
+    it('Flood Fill Test', () => {
+        const matrix = [
+          [1, 1, 1],
+          [1, 1, 0],
+          [1, 0, 1],
+        ];
+        
+        const startX = 1;
+        const startY = 1;
+        const newColor = 2;
+      
+        const expectedResult = [
+          [2, 2, 2],
+          [2, 2, 0],
+          [2, 0, 1],
+        ];
+        expect(floodFill(matrix, startX, startY, newColor)).toEqual(expectedResult);
+})});

@@ -1,5 +1,9 @@
 import { binarySearch } from './Binary.js';
 
+beforeAll(() => {
+  console.info('Autor: Hecho por Ruben Vega');
+})
+
 describe('binarySearch', () => {
   const sortedArray = [1, 3, 5, 7, 9, 11, 13, 15, 17];
 

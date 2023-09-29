@@ -1,41 +1,34 @@
 /**
- * Flood fill algorithm.
- *
- * @param {number[][]} grid - Multi-dimensional array representing the grid
- * @param {number} row - Row index
- * @param {number} col - Column index
- * @param {number} targetColor - Color to be replaced
- * @param {number} replacementColor - Color to replace with
- */
-export function floodFill(grid, row, col, targetColor, replacementColor) {
-  const numRows = grid.length;
-  const numCols = grid[0].length;
+ * @function floodfill
+ * @description  es un algoritmo utilizado para llenar áreas conectadas en una matriz o lienzo con un color o valor específico.
+ * @param {matrix,startX,startY,newColor} elemento - cadena de Entrada
+ * @see [floodfill](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwij0Z_7ysSBAxUAJEQIHc7ECkUQFnoECA8QAQ&url=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FAlgoritmo_de_relleno_por_difusi%25C3%25B3n&usg=AOvVaw0hiQjK51km_6xjWk-FHdHY&opi=89978449)
+*/
+function floodFill(matrix, startX, startY, newColor) {
+  const originalColor = matrix[startX][startY];
+  if (originalColor === newColor) return matrix;
 
-  // Check if the current cell is within bounds and has the target color
-  if (row < 0 || col < 0 || row >= numRows || col >= numCols || grid[row][col] !== targetColor) {
-    return;
+  function fill(x, y) {
+    if (
+      x < 0 ||
+      x >= matrix.length ||
+      y < 0 ||
+      y >= matrix[0].length ||
+      matrix[x][y] !== originalColor
+    ) {
+      return;
+    }
+
+    matrix[x][y] = newColor;
+
+    fill(x + 1, y);
+    fill(x - 1, y);
+    fill(x, y + 1);
+    fill(x, y - 1);
   }
 
-  // Change the current cell color to the replacement color
-  grid[row][col] = replacementColor;
-
-  // Recur for the neighboring cells
-  floodFill(grid, row + 1, col, targetColor, replacementColor); // Down
-  floodFill(grid, row - 1, col, targetColor, replacementColor); // Up
-  floodFill(grid, row, col + 1, targetColor, replacementColor); // Right
-  floodFill(grid, row, col - 1, targetColor, replacementColor); // Left
+  fill(startX, startY);
+  return matrix;
 }
 
-// Example usage:
-const grid = [
-  [1, 1, 1, 1, 1],
-  [1, 1, 1, 0, 0],
-  [1, 0, 0, 0, 1],
-  [1, 1, 1, 1, 1]
-];
-
-console.log('Original grid:');
-console.log(grid);
-floodFill(grid, 1, 2, 1, 2); // Fill from (1, 2) with color 1 to color 2
-console.log('Grid after flood fill:');
-console.log(grid);
+export { floodFill }

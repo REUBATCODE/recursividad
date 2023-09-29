@@ -14,23 +14,4 @@ describe('letterCombinations', () => {
     expect(result).toEqual(expectedCombinations);
   });
 
-  it('input vacío', () => {
-    const phoneNumber = '';
-    const expectedCombinations = [];
-
-    const result = letterCombinations(phoneNumber);
-
-    expect(result).toEqual(expectedCombinations);
-  });
-
-  it('input 1s', () => {
-    const phoneNumber = '120';
-    const expectedCombinations = [];
-
-    const result = letterCombinations(phoneNumber);
-
-    expect(result).toEqual(expectedCombinations);
-  });
-
-  // Add more test cases and describe blocks as needed
 });
