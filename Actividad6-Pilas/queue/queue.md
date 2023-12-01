@@ -22,3 +22,7 @@ Se crea una instancia de la cola `cola` utilizando la clase `Queue` y se realiza
 3. **Eliminar y obtener elementos de la cola**: Utilizando el método `dequeue()`, se eliminan y obtienen los elementos de la cola uno por uno, mostrando cada uno por consola.
 4. **Verificar si la cola está vacía**: Utilizando el método `isEmpty()`, se verifica si la cola está vacía y se muestra por consola.
 5. **Obtener el tamaño de la cola**: Utilizando el método `size()`, se obtiene el tamaño actual de la cola y se muestra por consola.
+<img width="1440" alt="Captura de Pantalla 2023-11-30 a la(s) 21 07 36" src="https://github.com/REUBATCODE/recursividad/assets/126991341/25d6a554-11e5-4151-adfc-9efdd245daf7">
+
+
+
