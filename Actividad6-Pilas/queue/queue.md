@@ -22,16 +22,3 @@ Se crea una instancia de la cola `cola` utilizando la clase `Queue` y se realiza
 3. **Eliminar y obtener elementos de la cola**: Utilizando el método `dequeue()`, se eliminan y obtienen los elementos de la cola uno por uno, mostrando cada uno por consola.
 4. **Verificar si la cola está vacía**: Utilizando el método `isEmpty()`, se verifica si la cola está vacía y se muestra por consola.
 5. **Obtener el tamaño de la cola**: Utilizando el método `size()`, se obtiene el tamaño actual de la cola y se muestra por consola.
-
-## Archivo de pruebas (queue.test.js)
-
-Se proporciona un archivo de pruebas `queue.test.js` que utiliza el framework de pruebas Jest para verificar el correcto funcionamiento de los métodos implementados en la clase `Queue`. Las pruebas incluyen casos para verificar el funcionamiento de `enqueue()`, `dequeue()`, `isEmpty()`, `size()` y `peek()`.
-
-Las pruebas verifican:
-- Agregar y eliminar elementos de la cola.
-- Verificar si la cola está vacía.
-- Obtener el tamaño de la cola.
-- Obtener el primer elemento de la cola sin eliminarlo.
-
-Se importa la clase `Queue` desde el archivo de implementación y se ejecutan diferentes casos de prueba para asegurar su correcto funcionamiento.
-
