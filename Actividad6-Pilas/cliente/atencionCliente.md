@@ -15,3 +15,5 @@ El código se compone de dos partes principales:
    - Se crean instancias de la cola y se agregan clientes a la misma.
    - Se atienden a los clientes en orden de llegada, imprimiendo sus nombres en la consola.
    - Al finalizar, se indica que la cola está vacía.
+
+<img width="1440" alt="Captura de Pantalla 2023-11-30 a la(s) 21 05 05" src="https://github.com/REUBATCODE/recursividad/assets/126991341/122942e5-29e9-496f-9c37-e39a4bd472c0">
