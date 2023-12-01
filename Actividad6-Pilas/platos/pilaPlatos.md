@@ -15,3 +15,4 @@ El código se compone de dos partes principales:
    - Se crean instancias de la pila y se apilan platos.
    - Se retiran los platos de la pila en orden inverso al que fueron apilados, imprimiendo sus nombres en la consola.
    - Al finalizar, se indica que la pila de platos está vacía.
+<img width="1440" alt="Captura de Pantalla 2023-11-30 a la(s) 21 06 34" src="https://github.com/REUBATCODE/recursividad/assets/126991341/3e2803e3-a330-433f-badb-48eba0070c8b">
